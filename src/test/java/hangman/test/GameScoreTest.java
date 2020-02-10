@@ -15,7 +15,7 @@ public class GameScoreTest {
     
     
     /**
-     * correctCount < 0    ExceptionValorInvalido
+     * correctCount < 0  --->  ExceptionValorInvalido
      */
     @Test
     public void calculateScoreOriginal() {
@@ -23,7 +23,7 @@ public class GameScoreTest {
         
     }
     /**
-     * correctCount > 0    Integer
+     * correctCount > 0  --->  Integer
      */
     @Test
     public void calculateScoreOriginal2() {
@@ -32,7 +32,7 @@ public class GameScoreTest {
     }
     
     /**
-     * incorrectCount < 0  ExceptionValorInvalido
+     * incorrectCount < 0 ---> ExceptionValorInvalido
      */
     @Test
     public void calculateScoreOriginal3() {
@@ -41,14 +41,14 @@ public class GameScoreTest {
     }
 
     /**
-     * incorrectCount > 0  Integer
+     * incorrectCount > 0 ---> Integer
      */
     @Test
     public void calculateScoreOriginal4() {
         
     }
     /**
-     * correctCount < 0   ExceptionValorInvalido
+     * correctCount < 0  ---> ExceptionValorInvalido
      */
     @Test
     public void calculateScorePower() {
@@ -56,7 +56,7 @@ public class GameScoreTest {
         
     }
     /**
-     * correctCount > 0 
+     * (correctCount > 0  && 100+(5^^correctCount)-10*incorrectCount < 500) ---> Integer
      * 
      */
     @Test
@@ -64,26 +64,34 @@ public class GameScoreTest {
         
         
     }
-    
     /**
-     *
-     * incorrectCount < 0  ExceptionValorInvalido
+     * 100+(5^^correctCount)-10*incorrectCount > 500 ---> 500
      */
     @Test
     public void calculateScorePower3() {
         
         
     }
-
+    
     /**
-     * incorrectCount > 0 
+     *
+     * incorrectCount < 0  ---> ExceptionValorInvalido
      */
     @Test
     public void calculateScorePower4() {
         
+        
+    }
+
+    /**
+     * (incorrectCount > 0 && 100+(5^^correctCount)-10*incorrectCount < 500) ---> Integer
+     */
+    @Test
+    public void calculateScorePower5() {
+        
     }
     /**
-     * correctCount < 0   ExceptionValorInvalido
+     * correctCount < 0  ---> ExceptionValorInvalido
      */
     @Test
     public void calculateScoreBonusl() {
@@ -91,7 +99,7 @@ public class GameScoreTest {
         
     }
     /**
-     * correctCount > 0  Integer
+     * correctCount > 0  ---> Integer
      */
     @Test
     public void calculateScoreBonus2() {
@@ -100,7 +108,7 @@ public class GameScoreTest {
     }
     
     /**
-     * incorrectCount < 0  ExceptionValorInvalido
+     * incorrectCount < 0  ---> ExceptionValorInvalido
      */
     @Test
     public void calculateScoreBonus3() {
@@ -109,11 +117,11 @@ public class GameScoreTest {
     }
 
     /**
-     * incorrectCount > 0  Integer
+     * incorrectCount > 0  ---> Integer
      */
     @Test
     public void calculateScoreBonus4() {
         
     }
-
+    
 }
