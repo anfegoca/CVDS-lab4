@@ -22,6 +22,12 @@ public class BonusScore implements GameScore {
      * @return el resultado de la poscondicion lo retornamos
      */
     public int calculateScore(int correctCount, int incorrectCount) throws ExceptionValorInvalido  {
-        return 0;
+        int puntos = 0;
+        puntos += correctCount*10;
+        puntos -= incorrectCount*5;
+        if (puntos < 0){
+            puntos = 0;
+        }
+        return puntos;
     }
 }

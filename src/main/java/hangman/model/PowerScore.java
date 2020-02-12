@@ -22,7 +22,17 @@ public class PowerScore implements GameScore{
      * @return el resultado de la poscondicion lo retornamos
      */
     public int calculateScore(int correctCount, int incorrectCount)throws ExceptionValorInvalido{
-        return 0;
+        int puntos = 0;
+        if(correctCount>0){
+            puntos += Math.pow(5,correctCount);
+            puntos -= incorrectCount*8;
+        }
+        if(puntos < 0){
+            puntos = 0;
+        }else if(puntos > 500){
+            puntos =500;
+        }
+        return puntos;
     }
     
 }

@@ -47,7 +47,8 @@ public class GameScoreTest {
         } catch (ExceptionValorInvalido ex) {
             Logger.getLogger(GameScoreTest.class.getName()).log(Level.SEVERE, null, ex);
         }
-        assertEquals(0,res);
+        System.out.println(res);
+        assertEquals(100,res);
         
     }
     
@@ -276,6 +277,7 @@ public class GameScoreTest {
         } catch (ExceptionValorInvalido ex) {
             Logger.getLogger(GameScoreTest.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
         assertEquals(100,res);
     }
     /**

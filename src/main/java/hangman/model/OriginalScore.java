@@ -25,7 +25,12 @@ public class OriginalScore implements GameScore{
  
     @Override
     public int calculateScore(int correctCount, int incorrectCount) throws ExceptionValorInvalido {
-        return 0;
+        int puntos = 100;
+        puntos -= incorrectCount*10;
+        if(puntos < 0){
+            puntos=0;
+        }
+        return puntos;
     }
     
 }
